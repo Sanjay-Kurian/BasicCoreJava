@@ -1,4 +1,5 @@
 package com.bridgelabz.utility;
+import java.io.PrintWriter;
 import java.util.Scanner;
 public class Utility {
 	Scanner scanner;
@@ -14,8 +15,19 @@ public class Utility {
 	{
 		return scanner.next().charAt(0);
 	}
-	
+	public double getDouble() {
+		// TODO Auto-generated method stub
+		return scanner.nextDouble();
+	}
+	public boolean getBoolean() {
+		// TODO Auto-generated method stub
+		return scanner.nextBoolean();
+	}
 	//method to return flip coin percentage
+	/**Purpose: To return the percentage of coin flip outcome.
+	 *	 * @param  flip
+	 *@return percentile 
+	 */
 	public void flipCoin(int flip)
 	{	
 		int heads=0,tails=0;
@@ -238,6 +250,20 @@ public class Utility {
 			System.out.println("Invalid input. The temperature should be above 50 and wind speed should be between 3 and 120");
 		}
 		
+	}
+	public <T> void print2DArray(T[][] inputArray, int rows, int columns) {
+		PrintWriter printwriter = new PrintWriter(System.out);
+		// TODO Auto-generated method stub
+		for (int i =0;i<rows;i++)
+		{
+			for (int j =0;j<columns;j++)
+			{ 
+				printwriter.write(inputArray[i][j]+" ");
+				printwriter.flush();
+				//System.out.print(inputArray[i][j]+" ");
+			}
+			System.out.println();
+		}
 	}
 }
 
